@@ -1,0 +1,59 @@
+<!--
+  Generated template for the PesquisarCardapioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cardápio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+  <ion-grid>
+     <ion-row>
+        <ion-col text-center>
+          <ion-item>
+            <ion-label>Escola ou Creche</ion-label>
+            <ion-select  [(ngModel)]="escolas" placeholder="Informe a escola para ver o cardápio">
+              <ion-option>ANTONIO CARLOS DE ANDRADE EMEF</ion-option>
+              <ion-option>JUCA DE OLIVEIRA EMEF</ion-option>
+              <ion-option>KAROLINE OLIVEIRA EMEF</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+     </ion-row>
+
+     <ion-row>
+        <ion-col text-center>
+          <h1 >Selecione a faixa escolar</h1>
+          <button ion-button medium>
+            1º à 4º <br> ano
+          </button>
+          <button ion-button >
+            5º à 9º <br> ano
+          </button>
+          <button ion-button >
+            9 <br> anos
+          </button>
+          <button ion-button >
+            3 <br> anos
+          </button>           
+        </ion-col>
+     </ion-row>  
+
+     <ion-row>
+        <ion-col>
+          <h1>Selecione o Período</h1>
+        </ion-col>
+     </ion-row>  
+   </ion-grid>
+
+</ion-content>

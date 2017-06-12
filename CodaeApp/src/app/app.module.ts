@@ -1,3 +1,4 @@
+import { PesquisarCardapioPage } from './../pages/pesquisar-cardapio/pesquisar-cardapio';
 import { CardapioPage } from './../pages/cardapio/cardapio';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { LoginPage } from './../pages/login/login';
     MyApp,
     HomePage,
     LoginPage,
-    CardapioPage
+    CardapioPage,
+    PesquisarCardapioPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { LoginPage } from './../pages/login/login';
     MyApp,
     HomePage,
     LoginPage,
-    CardapioPage
+    CardapioPage, 
+    PesquisarCardapioPage
   ],
   providers: [
     StatusBar,

@@ -1,3 +1,4 @@
+import { PesquisarCardapioPage } from './../pesquisar-cardapio/pesquisar-cardapio';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -27,6 +28,14 @@ export class LoginPage {
   }
 
   showCardapio(){
+    this.navCtrl.setRoot(CardapioPage);
+  }
+
+  pesquisarCardapio(){
+    this.navCtrl.push(PesquisarCardapioPage);
+  }
+
+  login(){
     this.navCtrl.setRoot(CardapioPage);
   }
 
