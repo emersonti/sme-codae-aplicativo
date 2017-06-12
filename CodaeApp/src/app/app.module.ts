@@ -1,3 +1,4 @@
+import { Camera } from '@ionic-native/camera';
 import { PesquisarCardapioPage } from './../pages/pesquisar-cardapio/pesquisar-cardapio';
 import { CardapioPage } from './../pages/cardapio/cardapio';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,7 +34,8 @@ import { LoginPage } from './../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {}

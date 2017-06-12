@@ -45,7 +45,9 @@ export class CardapioPage {
       let base64Image = 'data:image/jpeg;base64,' + imageData;
       alert('rolou com sucesso');
     }, (err) => {
-      alert('deu errao');
+      
+      alert(err);
+      console.log(err);      
     });
   }
 
