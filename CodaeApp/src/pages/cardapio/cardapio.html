@@ -10,11 +10,7 @@
 
    <ion-toolbar>
     <ion-title>Cardápio</ion-title>
-    <ion-buttons >
-      <button ion-button icon-only color="royal">
-        <ion-icon name="search"></ion-icon>
-      </button>
-    </ion-buttons>
+   
      
    
     <ion-buttons end>      
@@ -30,6 +26,79 @@
 </ion-header>
 
 
+
+
 <ion-content padding>
+
+  <ion-card>
+    <ion-card-header text-center>
+      22/05
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+  <img src="./assets/img/lanche.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      Café da Manhã
+      </ion-card-title>
+    <p text-justify>
+     O café da manha é super importante e faz com que o nosso metabolismo volte a funcionar corretamente, pois durante a noite ele fica lento. O café da manhã deve ser completo, com proteínas, vitaminas, minerais e carboidratos. 
+    </p>
+    <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>59 Likes</div>
+    </button>
+    <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>9 Comments</div>
+      </button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <img src="./assets/img/almoco.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      Almoço
+      </ion-card-title>
+    <p text-justify>
+     O almoço é particularmente importante para pessoas activas, que têm maiores necessidades de energia, vitaminas e minerais. 
+    </p>
+    <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>16 Likes</div>
+    </button>
+    <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>12 Comments</div>
+      </button>
+  </ion-card-content>
+</ion-card>
+
+<ion-fab right bottom>
+    <button ion-fab color="primary" (click)="getPhoto()">
+      <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+    </button>
+    
+</ion-fab>
+
 
 </ion-content>
