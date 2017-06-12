@@ -4,6 +4,8 @@ $font-path: "../assets/fonts";
 
 @import "ionic.globals";
 
+$primary: #ff9900;
+$secondary:  #995c00;
 
 // Shared Variables
 // --------------------------------------------------
@@ -11,7 +13,7 @@ $font-path: "../assets/fonts";
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
-
+$toolbar-background: $primary;
 
 
 
@@ -23,13 +25,27 @@ $font-path: "../assets/fonts";
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+// $colors: (
+//   primary:    #488aff,
+//   secondary:  #32db64,
+//   danger:     #f53d3d,
+//   light:      #f4f4f4,
+//   dark:       #222
+// );
+
+
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    $primary,
+  secondary:  $secondary,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222, 
+  header:     (
+    base: $primary,
+    contrast: $secondary
+  )
 );
+
 
 
 // App iOS Variables

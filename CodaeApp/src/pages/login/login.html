@@ -1,0 +1,56 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar text-center color="header">
+    <ion-title>De Olho na Alimentação Escolar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>  
+
+ <div>
+   <ion-grid>
+     <ion-row>
+        <ion-col>
+          <h1 text-center>ENTRAR</h1>
+          <ion-list class="list-form" padding>       
+            <ion-item>
+              <ion-input type="text" placeholder="Número da Matrícula"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Senha"></ion-input>
+            </ion-item>
+
+          </ion-list>
+
+          <div padding>
+            <button  ion-button color="danger"  block (click)="login()">
+              Login
+            </button>
+          </div>
+        </ion-col>
+     </ion-row>
+     <ion-row>
+       <ion-col text-center>
+         <p>Não Possui login?</p>
+         <p>Você pode acessar mesmo assim!</p>
+          <button  ion-button color="danger"  block (click)="login()">
+            Ver Cardápio
+          </button>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+ </div>
+
+
+</ion-content>
