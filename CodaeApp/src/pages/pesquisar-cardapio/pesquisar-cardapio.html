@@ -31,7 +31,26 @@
         </ion-col>
      </ion-row>
 
+    
+
      <ion-row>
+        <ion-col>
+          <h1>Selecione o Período</h1>
+          <ion-item>
+            <ion-label>Data</ion-label>
+            <ion-datetime 
+              displayFormat="DD de MMMM" 
+              pickerFormat="DD MMMM" 
+              [(ngModel)]="dataCardapio"
+              monthNames="janeiro, fevereiro, mar\u00e7o, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" 
+              cancelText="Cancelar" 
+              doneText="Ok"
+              ></ion-datetime>
+          </ion-item>      
+        </ion-col>
+     </ion-row>  
+
+      <ion-row>
         <ion-col text-center>
           <h1 >Selecione a faixa escolar</h1>
           <button ion-button medium>
@@ -49,11 +68,15 @@
         </ion-col>
      </ion-row>  
 
-     <ion-row>
-        <ion-col>
-          <h1>Selecione o Período</h1>
-        </ion-col>
-     </ion-row>  
    </ion-grid>
-
+   
 </ion-content>
+
+<ion-footer>
+  <button  round full ion-button large color="danger">
+    <span padding-right>
+      Ver Cardápio
+    </span>      
+    <ion-icon name="pizza" padding-left></ion-icon>
+  </button>  
+</ion-footer>
