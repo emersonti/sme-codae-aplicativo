@@ -1,33 +1,24 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { CardapioPage } from './../cardapio/cardapio';
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the CardapioPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-cardapio',
+  templateUrl: 'cardapio.html',
 })
-export class LoginPage {
-  
-  //cardapioPage: any;
-
+export class CardapioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    //this.cardapioPage = CardapioPage;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-
-  showCardapio(){
-    this.navCtrl.setRoot(CardapioPage);
+    console.log('ionViewDidLoad CardapioPage');
   }
 
 }

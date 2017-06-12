@@ -1,3 +1,4 @@
+import { CardapioPage } from './../pages/cardapio/cardapio';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,7 +13,8 @@ import { LoginPage } from './../pages/login/login';
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    CardapioPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { LoginPage } from './../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    CardapioPage
   ],
   providers: [
     StatusBar,
