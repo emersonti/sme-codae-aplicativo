@@ -7,12 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>avaliar</ion-title>
+    <ion-title>Avaliar</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-label> O Cardápio está correto?</ion-label>
+    <ion-toggle  checked="true"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Sabor - Nota {{sabor}}</ion-label>
+    <ion-range min="1" max="10" step="1" snaps="true" color="secondary" [(ngModel)]="sabor"></ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Variedade - Nota {{variedade}}</ion-label>
+    <ion-range min="1" max="10" step="1" snaps="true" color="secondary" [(ngModel)]="variedade"></ion-range>
+  </ion-item>
 
 </ion-content>

@@ -17,7 +17,7 @@ import { CardapioPage } from './../cardapio/cardapio';
 export class LoginPage {
   
   //cardapioPage: any;
-
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     //this.cardapioPage = CardapioPage;

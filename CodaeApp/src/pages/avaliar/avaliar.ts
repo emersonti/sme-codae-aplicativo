@@ -13,6 +13,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'avaliar.html',
 })
 export class AvaliarPage {
+  sabor: number = 5;
+  variedade: number = 5;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -15,4 +15,122 @@
 
 <ion-content padding>
 
+<ion-list>
+  <ion-item>
+    <ion-row>
+      <ion-col  margin-vertical>calorias</ion-col>
+      <ion-col  margin-vertical> 
+        <span class="valores" large> 150 </span> 
+        <span class="grandeza">kcal</span>
+      </ion-col>
+      <ion-col>
+        <span float-end>38%</span>
+        <round-progress
+          [current]="current"
+          [max]="max"
+          [color]="'#ff9900'"
+          [background]="'#eaeaea'"
+          [radius]="25"
+          [stroke]="7"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="false"
+          [duration]="4000"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="1000"
+          (onRender)="doSomethingWithCurrentValue($event)"></round-progress>
+
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-item>
+    <ion-row>
+      <ion-col padding-vertical margin-vertical>proteínas</ion-col>
+      <ion-col padding-vertical margin-vertical> 
+        <span class="valores" large> 25 </span> 
+        <span class="grandeza">g</span>
+      </ion-col>
+      <ion-col>
+        <span float-end>22%</span>
+        <round-progress
+          [current]="22"
+          [max]="100"
+          [color]="'#ff9900'"
+          [background]="'#eaeaea'"
+          [radius]="30"
+          [stroke]="7"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="false"
+          [duration]="4000"
+          [animation]="'easeInQuart'"
+          [animationDelay]="1000"
+          (onRender)="doSomethingWithCurrentValue($event)"></round-progress>
+
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-item>
+    <ion-row>
+      <ion-col padding-vertical margin-vertical>carboídratos</ion-col>
+      <ion-col padding-vertical margin-vertical> 
+        <span class="valores" large> 13 </span> 
+        <span class="grandeza">g</span>
+      </ion-col>
+      <ion-col>
+        <span float-end>62%</span>
+        <round-progress
+          [current]="62"
+          [max]="100"
+          [color]="'#ff9900'"
+          [background]="'#eaeaea'"
+          [radius]="30"
+          [stroke]="7"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="false"
+          [duration]="4000"
+          [animation]="'easeOutElastic'"
+          [animationDelay]="1000"
+          (onRender)="doSomethingWithCurrentValue($event)"></round-progress>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-item>
+    <ion-row>
+      <ion-col padding-vertical margin-vertical>sódio</ion-col>
+      <ion-col padding-vertical margin-vertical> 
+        <span class="valores" large> 2 </span> 
+        <span class="grandeza">g</span>
+      </ion-col>
+      <ion-col>
+        <span float-end>13%</span>
+        <round-progress
+          [current]="13"
+          [max]="100"
+          [color]="'#ff9900'"
+          [background]="'#eaeaea'"
+          [radius]="30"
+          [stroke]="7"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="false"
+          [duration]="4000"
+          [animation]="'easeInCirc'"
+          [animationDelay]="1000"
+          (onRender)="doSomethingWithCurrentValue($event)"></round-progress>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  
+</ion-list>
+
+
 </ion-content>

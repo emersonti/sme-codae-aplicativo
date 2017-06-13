@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { InformacaoNutricionalPage } from './informacao-nutricional';
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { InformacaoNutricionalPage } from './informacao-nutricional';
   ],
   imports: [
     IonicPageModule.forChild(InformacaoNutricionalPage),
+    RoundProgressModule
   ],
   exports: [
     InformacaoNutricionalPage

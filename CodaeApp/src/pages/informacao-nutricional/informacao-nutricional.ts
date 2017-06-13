@@ -14,11 +14,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InformacaoNutricionalPage {
 
+  max: number = 100;
+  current: number = 38;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InformacaoNutricionalPage');
+  }
+
+  doSomethingWithCurrentValue(e){
+
   }
 
 }
