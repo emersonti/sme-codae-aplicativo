@@ -1,3 +1,4 @@
+import { RefeicaoDetalhesPage } from './../pages/refeicao-detalhes/refeicao-detalhes';
 import { CardapioPage } from './../pages/cardapio/cardapio';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -13,6 +14,7 @@ export class MyApp {
   rootPage:any = HomePage;
   loginPage:any = LoginPage;
   cardapioPage: any = CardapioPage;
+  refeicaoDetalhesPage: any = RefeicaoDetalhesPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

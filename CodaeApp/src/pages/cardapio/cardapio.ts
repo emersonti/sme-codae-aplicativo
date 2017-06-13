@@ -1,3 +1,4 @@
+import { RefeicaoDetalhesPage } from './../refeicao-detalhes/refeicao-detalhes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -36,7 +37,7 @@ export class CardapioPage {
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
-  };
+  }
 
   getPhoto(){
     this.camera.getPicture(this.cameraOptions).then((imageData) => {
@@ -49,6 +50,15 @@ export class CardapioPage {
       alert(err);
       console.log(err);      
     });
+  }
+
+  onCardClick(){
+    this.navCtrl.push(RefeicaoDetalhesPage);
+    //alert('voce clicou na cartão');
+  }
+
+  onLikeClick(){
+    alert('novo like');
   }
 
 

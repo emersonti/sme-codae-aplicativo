@@ -54,15 +54,15 @@
   </ion-card>
 
   <ion-card>
-  <img src="./assets/img/lanche.jpg"/>
+  <img (click)="onCardClick()" src="./assets/img/cafe-da-manha.jpg"/>
   <ion-card-content>
-    <ion-card-title>
+    <ion-card-title  (click)="onCardClick()">
       Café da Manhã
       </ion-card-title>
-    <p text-justify>
+    <p text-justify (click)="onCardClick()">
      O café da manha é super importante e faz com que o nosso metabolismo volte a funcionar corretamente, pois durante a noite ele fica lento. O café da manhã deve ser completo, com proteínas, vitaminas, minerais e carboidratos. 
     </p>
-    <button ion-button icon-left clear small>
+    <button ion-button icon-left clear small (click)="onLikeClick()">
         <ion-icon name="thumbs-up"></ion-icon>
         <div>59 Likes</div>
     </button>
