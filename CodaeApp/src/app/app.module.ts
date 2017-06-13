@@ -1,3 +1,4 @@
+import { RefeicaoDetalhesTabsPage } from './../pages/refeicao-detalhes-tabs/refeicao-detalhes-tabs';
 import { RefeicaoDetalhesPage } from './../pages/refeicao-detalhes/refeicao-detalhes';
 import { Camera } from '@ionic-native/camera';
 import { PesquisarCardapioPage } from './../pages/pesquisar-cardapio/pesquisar-cardapio';
@@ -19,7 +20,8 @@ import { LoginPage } from './../pages/login/login';
     LoginPage,
     CardapioPage,
     PesquisarCardapioPage,
-    RefeicaoDetalhesPage
+    RefeicaoDetalhesPage,
+    RefeicaoDetalhesTabsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { LoginPage } from './../pages/login/login';
     LoginPage,
     CardapioPage, 
     PesquisarCardapioPage,
-    RefeicaoDetalhesPage
+    RefeicaoDetalhesPage,
+    RefeicaoDetalhesTabsPage
   ],
   providers: [
     StatusBar,

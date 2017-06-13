@@ -1,3 +1,4 @@
+import { RefeicaoDetalhesTabsPage } from './../refeicao-detalhes-tabs/refeicao-detalhes-tabs';
 import { RefeicaoDetalhesPage } from './../refeicao-detalhes/refeicao-detalhes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -53,7 +54,7 @@ export class CardapioPage {
   }
 
   onCardClick(){
-    this.navCtrl.push(RefeicaoDetalhesPage);
+    this.navCtrl.push(RefeicaoDetalhesTabsPage);
     //alert('voce clicou na cartão');
   }
 

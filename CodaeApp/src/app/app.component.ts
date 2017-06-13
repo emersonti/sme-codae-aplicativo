@@ -1,3 +1,4 @@
+import { RefeicaoDetalhesTabsPage } from './../pages/refeicao-detalhes-tabs/refeicao-detalhes-tabs';
 import { RefeicaoDetalhesPage } from './../pages/refeicao-detalhes/refeicao-detalhes';
 import { CardapioPage } from './../pages/cardapio/cardapio';
 import { Component } from '@angular/core';
@@ -15,6 +16,7 @@ export class MyApp {
   loginPage:any = LoginPage;
   cardapioPage: any = CardapioPage;
   refeicaoDetalhesPage: any = RefeicaoDetalhesPage;
+  refeicaoDetalhesTabsPage: any = RefeicaoDetalhesTabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
