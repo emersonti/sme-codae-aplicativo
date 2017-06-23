@@ -67,19 +67,13 @@ export class LoginPage {
   }
 
 
-  // ionViewWillLoad(){    
-  //   this.afAuth.authState.subscribe(data => {
-  //     if (data && data.email && data.uid){
-  //      this.navCtrl.setRoot(CardapioPage);
-  //     }
-  //   });
-  // }
+
 
   ionViewCanEnter() {
    this.afAuth.authState.subscribe(data => {
       if (data && data.email && data.uid){       
        this.navCtrl.setRoot(CardapioPage);
-       return Promise.reject(true);
+       return false;
       }
     });
     return true;

@@ -8,6 +8,9 @@
   </div>
   <div padding>
     <button ion-button block (click)="signup()" class="signup">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+    <button ion-button block color="light" (click)="login()" class="login">{{ 'LOGIN' | translate }}</button> 
+    <p text-center>Não Possui login? <br> Você pode acessar mesmo assim! </p>
+    
+    <button ion-button block color="danger" (click)="pesquisarCardapio()" class="signup">{{ 'VER_CARDAPIO' | translate }}</button>
   </div>
 </ion-content>

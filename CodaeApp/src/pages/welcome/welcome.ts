@@ -1,3 +1,4 @@
+import { PesquisarCardapioPage } from './../pesquisar-cardapio/pesquisar-cardapio';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { CardapioPage } from './../cardapio/cardapio';
 import { Component } from '@angular/core';
@@ -22,22 +23,33 @@ export class WelcomePage {
     private afAuth: AngularFireAuth) { }
 
   login() {
-    this.navCtrl.push(LoginPage);
+    
+     this.afAuth.authState.subscribe(data => {
+      if (data && data.email && data.uid){       
+         this.navCtrl.setRoot(CardapioPage);
+      } else {
+        this.navCtrl.push(LoginPage);
+      }
+    });
   }
 
   signup() {
     this.navCtrl.push(SignupPage);
   }
 
-  ionViewCanEnter() {
-   this.afAuth.authState.subscribe(data => {
-      if (data && data.email && data.uid){       
-       this.navCtrl.setRoot(CardapioPage);
-       return Promise.reject(true);
-      }
-    });
-    return true;
+  pesquisarCardapio(){
+    this.navCtrl.push(PesquisarCardapioPage);
   }
 
-  
+  // ionViewCanEnter() {
+  //  this.afAuth.authState.subscribe(data => {
+  //     if (data && data.email && data.uid){       
+  //      this.navCtrl.setRoot(CardapioPage);
+  //      return false;
+  //     }
+  //   });
+  //   return true;
+  // }
+
+
 }

@@ -30,28 +30,7 @@
 
 <ion-content padding>
 
-  <ion-card>
-    <ion-card-header text-center>
-      22/05
-    </ion-card-header>
 
-    <ion-list>
-      <button ion-item>
-        <ion-icon name="cart" item-start></ion-icon>
-        Lanche
-      </button>
-
-      <button ion-item>
-        <ion-icon name="medical" item-start></ion-icon>
-        Almoço
-      </button>
-
-      <button ion-item>
-        <ion-icon name="cafe" item-start></ion-icon>
-        Cafe
-      </button>
-    </ion-list>
-  </ion-card>
 
   <ion-card>
   <img (click)="onCardClick()" src="./assets/img/cafe-da-manha.jpg"/>
@@ -59,9 +38,20 @@
     <ion-card-title  (click)="onCardClick()">
       Café da Manhã
       </ion-card-title>
-    <p text-justify (click)="onCardClick()">
-     O café da manha é super importante e faz com que o nosso metabolismo volte a funcionar corretamente, pois durante a noite ele fica lento. O café da manhã deve ser completo, com proteínas, vitaminas, minerais e carboidratos. 
-    </p>
+      <ul  (click)="onCardClick()">
+        <li>
+          calorias 150 calorias  
+        </li>
+        <li>
+          proteínas 13 gramas
+        </li>
+         <li>
+          carboidratos 13 gramas
+        </li>
+        <li>
+          gorduras 9 gramas
+        </li>
+      </ul>
     <button ion-button icon-left clear small (click)="onLikeClick()">
         <ion-icon name="thumbs-up"></ion-icon>
         <div>59 Likes</div>

@@ -28,9 +28,7 @@ export class CardapioPage {
     private camera: Camera) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CardapioPage');
-  }
+ 
 
   cameraOptions:  CameraOptions = {
     quality: 100,

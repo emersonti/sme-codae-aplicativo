@@ -28,6 +28,7 @@ export class SignupPage {
 
   // Our translated text strings
   private signupErrorString: string;
+  private signupSuccessString: string;
 
   constructor(public navCtrl: NavController,
     public toastCtrl: ToastController,
@@ -36,13 +37,16 @@ export class SignupPage {
 
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
-    })
+    });
+    // this.translateService.get('SIGNUP_SUCCESS').subscribe((value) => {
+    //   this.signupSuccessString = value;
+    // })
   }
 
   async doSignup(user: User) {    
     // Attempt to login in through our User service
     try {
-      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);      
       this.navCtrl.setRoot(CardapioPage);
     } catch (error) {
       // Unable to sign up
