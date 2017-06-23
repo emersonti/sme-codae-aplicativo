@@ -11,7 +11,7 @@ import { IonicPage, NavController } from 'ionic-angular';
   selector: 'page-refeicao-detalhes-tabs',
   templateUrl: 'refeicao-detalhes-tabs.html'
 })
-@IonicPage()
+
 export class RefeicaoDetalhesTabsPage {
 
   informacaoNutricionalRoot = 'InformacaoNutricionalPage'

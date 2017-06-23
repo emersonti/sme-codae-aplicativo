@@ -1,5 +1,4 @@
 import { RefeicaoDetalhesTabsPage } from './../refeicao-detalhes-tabs/refeicao-detalhes-tabs';
-import { RefeicaoDetalhesPage } from './../refeicao-detalhes/refeicao-detalhes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -15,7 +14,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
 
-@IonicPage()
+
 @Component({
   selector: 'page-cardapio',
   templateUrl: 'cardapio.html',

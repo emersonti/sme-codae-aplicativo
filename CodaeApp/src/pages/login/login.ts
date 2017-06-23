@@ -1,42 +1,76 @@
-import { PesquisarCardapioPage } from './../pesquisar-cardapio/pesquisar-cardapio';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
+import {  AngularFireAuth } from 'angularfire2/auth';
 
-import { CardapioPage } from './../cardapio/cardapio';
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-@IonicPage()
+import { MainPage } from '../../pages/pages';
+
+import { User } from '../../models/user';
+
+import { TranslateService } from '@ngx-translate/core';
+
+
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html',
+  templateUrl: 'login.html'
 })
 export class LoginPage {
-  
-  //cardapioPage: any;
-  
+  // The account fields for the login form.
+  // If you're using the username field with or without email, make
+  // sure to add it to the type
+  account: { email: string, password: string } = {
+    email: 'test@example.com',
+    password: 'test'
+  };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    //this.cardapioPage = CardapioPage;
+  user = {} as User;
+
+  // Our translated text strings
+  private loginErrorString: string;
+
+  constructor(public navCtrl: NavController,    
+    private afAuth: AngularFireAuth,
+    public toastCtrl: ToastController,
+    public translateService: TranslateService) {
+
+    this.translateService.get('LOGIN_ERROR').subscribe((value) => {
+      this.loginErrorString = value;
+    })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  // Attempt to login in through our User service
+  async doLogin(user: User) {
+     try {
+      let email = user.email;
+      let senha = user.password;
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(email, senha);
+      if(result){
+        this.navCtrl.push(MainPage);
+      } else{
+        let toast = this.toastCtrl.create({
+        message: this.loginErrorString,
+        duration: 3000,
+        position: 'top'
+        });
+        toast.present();
+      }
+    } catch (error) {
+      alert('entrou no catch');
+       let toast = this.toastCtrl.create({
+        message: this.loginErrorString,        
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    }
   }
 
-  showCardapio(){
-    this.navCtrl.setRoot(CardapioPage);
-  }
 
-  pesquisarCardapio(){
-    this.navCtrl.push(PesquisarCardapioPage);
-  }
-
-  login(){
-    this.navCtrl.setRoot(CardapioPage);
+  ionViewWillLoad(){    
+    this.afAuth.authState.subscribe(data => {
+      if (data && data.email && data.uid){
+       this.navCtrl.push(MainPage);        
+      }
+    });
   }
 
 }
