@@ -1,3 +1,4 @@
+import { CardapioPage } from './../cardapio/cardapio';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -19,6 +20,10 @@ export class PesquisarCardapioPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PesquisarCardapioPage');
+  }
+
+  gotoCardapio(){
+    this.navCtrl.push(CardapioPage);
   }
 
 }
