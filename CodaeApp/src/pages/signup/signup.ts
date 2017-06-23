@@ -1,3 +1,4 @@
+import { CardapioPage } from './../cardapio/cardapio';
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import {  AngularFireAuth } from 'angularfire2/auth';
@@ -42,7 +43,7 @@ export class SignupPage {
     // Attempt to login in through our User service
     try {
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
-      this.navCtrl.push(MainPage);
+      this.navCtrl.setRoot(CardapioPage);
     } catch (error) {
       // Unable to sign up
       let toast = this.toastCtrl.create({

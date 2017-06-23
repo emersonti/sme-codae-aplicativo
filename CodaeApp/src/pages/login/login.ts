@@ -3,6 +3,7 @@ import { NavController, ToastController } from 'ionic-angular';
 import {  AngularFireAuth } from 'angularfire2/auth';
 
 import { MainPage } from '../../pages/pages';
+import { CardapioPage } from './../cardapio/cardapio';
 
 import { User } from '../../models/user';
 
@@ -44,7 +45,8 @@ export class LoginPage {
       let senha = user.password;
       const result = await this.afAuth.auth.signInWithEmailAndPassword(email, senha);
       if(result){
-        this.navCtrl.push(MainPage);
+        //this.navCtrl.push(MainPage);
+        this.navCtrl.setRoot(CardapioPage);
       } else{
         let toast = this.toastCtrl.create({
         message: this.loginErrorString,
@@ -65,12 +67,22 @@ export class LoginPage {
   }
 
 
-  ionViewWillLoad(){    
-    this.afAuth.authState.subscribe(data => {
-      if (data && data.email && data.uid){
-       this.navCtrl.push(MainPage);        
+  // ionViewWillLoad(){    
+  //   this.afAuth.authState.subscribe(data => {
+  //     if (data && data.email && data.uid){
+  //      this.navCtrl.setRoot(CardapioPage);
+  //     }
+  //   });
+  // }
+
+  ionViewCanEnter() {
+   this.afAuth.authState.subscribe(data => {
+      if (data && data.email && data.uid){       
+       this.navCtrl.setRoot(CardapioPage);
+       return Promise.reject(true);
       }
     });
+    return true;
   }
 
 }

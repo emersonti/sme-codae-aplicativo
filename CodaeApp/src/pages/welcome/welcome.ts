@@ -1,3 +1,5 @@
+import { AngularFireAuth } from 'angularfire2/auth';
+import { CardapioPage } from './../cardapio/cardapio';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -16,7 +18,8 @@ import { SignupPage } from '../signup/signup';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController,
+    private afAuth: AngularFireAuth) { }
 
   login() {
     this.navCtrl.push(LoginPage);
@@ -25,4 +28,16 @@ export class WelcomePage {
   signup() {
     this.navCtrl.push(SignupPage);
   }
+
+  ionViewCanEnter() {
+   this.afAuth.authState.subscribe(data => {
+      if (data && data.email && data.uid){       
+       this.navCtrl.setRoot(CardapioPage);
+       return Promise.reject(true);
+      }
+    });
+    return true;
+  }
+
+  
 }
